@@ -1,0 +1,64 @@
+:root {
+    --text: aliceblue;
+    --button-color: rgb(26, 54, 86);
+    --page-gradient: linear-gradient(45deg, rgb(21, 29, 39), rgb(25, 37, 51));
+    --light-gradient: linear-gradient(45deg, rgb(27, 42, 59), rgb(22, 45, 73));
+}
+
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('storage/ethnocentric rg.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--page-gradient);
+    background-color: black;
+    background-repeat: no-repeat;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: fit-content;
+    width: 100vw;
+    padding: 10px;
+    background: var(--light-gradient);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & .links {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        & .link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            padding: 3px 12px 3px 3px;
+            gap: 10px;
+            background-color: var(--button-color);
+            border-radius: 1rem;
+            & img {
+                height: 40px;
+                border-radius: 0.9rem;
+            }
+        }
+    }
+}
