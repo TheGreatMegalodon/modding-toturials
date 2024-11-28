@@ -1,6 +1,7 @@
 :root {
     --text: aliceblue;
     --button-color: rgb(26, 54, 86);
+    --button-color-accent: rgb(44, 79, 119);
     --page-gradient: linear-gradient(45deg, rgb(21, 29, 39), rgb(25, 37, 51));
     --light-gradient: linear-gradient(45deg, rgb(27, 42, 59), rgb(22, 45, 73));
 }
@@ -50,14 +51,22 @@ header {
             display: flex;
             flex-direction: row;
             align-items: center;
+            transition: ease 0.2s;
+            cursor: pointer;
 
             padding: 3px 12px 3px 3px;
             gap: 10px;
             background-color: var(--button-color);
             border-radius: 1rem;
+            & img, name {
+                cursor: pointer;
+            }
             & img {
                 height: 40px;
                 border-radius: 0.9rem;
+            }
+            &:hover {
+                background-color: var(--button-color-accent);
             }
         }
     }
